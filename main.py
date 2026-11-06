@@ -1,1 +1,8 @@
-print("Hello")
+from fastapi import FastAPI
+
+
+app = FastAPI()
+
+@app.get('/home')
+async def homePage() -> dict:
+    return {"name": "Roman"}
